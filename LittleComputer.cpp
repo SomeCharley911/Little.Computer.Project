@@ -4,8 +4,6 @@ using namespace std;
 #include "LittleComputer.h"
 #include <vector>
 
-class LittleComputer::LittleComputer {};
-
 LittleComputer::LittleComputer()
 {
   m_Accumulator = 0;
