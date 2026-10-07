@@ -21,7 +21,8 @@ using namespace std;
 
 TEST_CASE("default constructor - memory not tested")
 {
-  LittleComputer c1;
+  LittleComputer;
+  c1;
   CHECK(c1.getAccumulator() == 0);
   CHECK(c1.getProgramCounter() == 0);
 }
