@@ -37,8 +37,14 @@ int LittleComputer::getCurrentInstruction()
   return m_memory.at(m_ProgramCounter);
 }
 
-+ step()
+void LittleComputer::step()
+{
+}
 
-    + isHalted():bool
+bool LittleComputer::isHalted()
+{
+}
 
-    + restart()
+void LittleComputer::restart()
+{
+}
