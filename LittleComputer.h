@@ -7,7 +7,7 @@
  * @brief A simple little computer simulator.
  *
  */
-class LittleComputer {
+class LittleComputer::LittleComputer {
 public:
   /**
    * @brief Construct a new Little Computer object with an empty program
