@@ -35,6 +35,15 @@ public:
    */
   int getAccumulator();
 
+  /**
+   * @brief return the value in specified memory location
+   *
+   * @param size_t the location in memory to return
+   *
+   * @return int Current value in location
+   */
+  int LittleComputer::getMemoryAt(size_t location);
+
   // Add other public member functions / constructors here
 
 private:
