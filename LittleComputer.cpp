@@ -15,7 +15,6 @@ public:
   {
     return m_Accumulator;
   }
-  // Add other public member functions / constructors here
 
 private:
   int m_Accumulator = 0;

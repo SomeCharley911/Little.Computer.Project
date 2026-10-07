@@ -34,7 +34,7 @@ public:
 private:
   int m_Accumulator = 0;       /// Current number stored in the accumulator
   size_t m_ProgramCounter = 0; /// current program being run
-  vector<int> m_memory;        /// loaded program in memory
+  std::vector<int> m_memory;   /// loaded program in memory
 };
 
 #endif // LITTLECOMPUTER_H
