@@ -10,9 +10,9 @@ LittleComputer::LittleComputer()
   m_ProgramCounter = 0;
 }
 
-size_t LittleComputer::getProgramCounter()
+int LittleComputer::getProgramCounter()
 {
-  return m_ProgramCounter;
+  return static_cast<int>(m_ProgramCounter);
 }
 
 int LittleComputer::getAccumulator()
