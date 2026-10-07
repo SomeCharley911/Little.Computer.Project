@@ -6,15 +6,15 @@ using namespace std;
 
 class LittleComputer {
 public:
-  LittleComputer::LittleComputer()
+  LittleComputer()
   {
   }
 
-  int LittleComputer::getProgramCounter()
+  int getProgramCounter()
   {
     return m_ProgramCounter;
   }
-  int LittleComputer::getAccumulator()
+  int getAccumulator()
   {
     return m_Accumulator;
   }
