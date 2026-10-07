@@ -4,7 +4,7 @@ using namespace std;
 #include "LittleComputer.h"
 #include <vector>
 
-class LittleComputer::LittleComputer {
+class LittleComputer {
 public:
   LittleComputer::LittleComputer()
   {
