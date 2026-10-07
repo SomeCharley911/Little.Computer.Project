@@ -44,6 +44,13 @@ public:
    */
   int LittleComputer::getMemoryAt(size_t location);
 
+  /**
+   * @brief return the value in current working memory location
+   *
+   * @return int Current value in location
+   */
+  int getCurrentInstruction();
+
   // Add other public member functions / constructors here
 
 private:
