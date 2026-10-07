@@ -4,17 +4,17 @@ using namespace std;
 #include "LittleComputer.h"
 #include <vector>
 
-class LittleComputer::LittleComputer {
+class LittleComputer {
 public:
-  LittleComputer()
+  LittleComputer::LittleComputer()
   {
   }
 
-  int getProgramCounter()
+  int LittleComputer::getProgramCounter()
   {
     return m_ProgramCounter;
   }
-  int getAccumulator()
+  int LittleComputer::getAccumulator()
   {
     return m_Accumulator;
   }
