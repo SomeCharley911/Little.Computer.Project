@@ -51,6 +51,18 @@ public:
    */
   int getCurrentInstruction();
 
+  void
+  step(); /// simulate one machine insctruction and increment program counter
+
+  /**
+   * @brief returns whether the computer is stopped or not
+   *
+   * @return bool whether it is stopped or not
+   */
+  bool isHalted();
+
+  void restart(); /// resets the computer and program counter
+
   // Add other public member functions / constructors here
 
 private:
