@@ -16,11 +16,17 @@ public:
   LittleComputer();
 
   /**
+   * @brief Construct a new Little Computer object with the provided program
+   *
+   * @param vector<int> The instructions to be processed
+   */
+  LittleComputer(vector<int> instructions);
+  /**
    * @brief Get the Program Counter
    *
    * @return int Current program counter
    */
-  int getProgramCounter();
+  size_t getProgramCounter();
 
   /**
    * @brief Get the Accumulator value
