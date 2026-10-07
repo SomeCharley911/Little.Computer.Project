@@ -32,9 +32,12 @@ int LittleComputer::getMemoryAt(size_t location)
   return m_memory.at(location);
 }
 
-+ getCurrentInstruction():int
+int LittleComputer::getCurrentInstruction()
+{
+  return m_memory.at(m_ProgramCounter);
+}
 
-    + step()
++ step()
 
     + isHalted():bool
 
