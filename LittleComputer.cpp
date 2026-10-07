@@ -6,18 +6,9 @@ using namespace std;
 
 class LittleComputer {
 public:
-  LittleComputer()
-  {
-  }
-  int getProgramCounter()
-  {
-    return m_ProgramCounter;
-  }
-  int getAccumulator()
-  {
-    return m_Accumulator;
-  }
-
+  LittleComputer();
+  int getProgramCounter() return m_ProgramCounter;
+  int getAccumulator() return m_Accumulator;
   // Add other public member functions / constructors here
 
 private:
