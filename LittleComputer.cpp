@@ -10,7 +10,7 @@ LittleComputer::LittleComputer()
   m_ProgramCounter = 0;
 }
 
-int LittleComputer::getProgramCounter()
+size_t LittleComputer::getProgramCounter()
 {
   return m_ProgramCounter;
 }
