@@ -4,23 +4,20 @@ using namespace std;
 #include "LittleComputer.h"
 #include <vector>
 
-class LittleComputer::LittleComputer {
-public:
-  LittleComputer::LittleComputer()
-  {
-  }
+class LittleComputer::LittleComputer {};
 
-  int LittleComputer::getProgramCounter()
-  {
-    return m_ProgramCounter;
-  }
-  int LittleComputer::getAccumulator()
-  {
-    return m_Accumulator;
-  }
+LittleComputer::LittleComputer()
+{
+  m_Accumulator = 0;
+  m_ProgramCounter = 0;
+}
 
-private:
-  int m_Accumulator = 0;
-  size_t m_ProgramCounter = 0;
-  vector<int> m_memory;
-};
+int LittleComputer::getProgramCounter()
+{
+  return m_ProgramCounter;
+}
+
+int LittleComputer::getAccumulator()
+{
+  return m_Accumulator;
+}
