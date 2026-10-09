@@ -119,19 +119,19 @@ TEST_CASE("branch always")
   CHECK(c1.getProgramCounter() == 1);
 }
 
-// TEST_CASE("branch if 0")
-// {
-//     // Program that skips instruction 1 due to branch
-//     // Then loads 5 and hits another branch. Does not take it.
-//     vector<int> program = {702, 0, 505, 701, 0, 5};
+TEST_CASE("branch if 0")
+{
+  // Program that skips instruction 1 due to branch
+  // Then loads 5 and hits another branch. Does not take it.
+  vector<int> program = {702, 0, 505, 701, 0, 5};
 
-//     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 2);
-//     c1.step();
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 4);
-// }
+  LittleComputer c1(program);
+  c1.step();
+  CHECK(c1.getProgramCounter() == 2);
+  c1.step();
+  c1.step();
+  CHECK(c1.getProgramCounter() == 4);
+}
 
 // TEST_CASE("restart")
 // {
