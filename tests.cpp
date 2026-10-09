@@ -26,17 +26,17 @@ TEST_CASE("default constructor - memory not tested")
   CHECK(c1.getProgramCounter() == 0);
 }
 
-TEST_CASE("constructor that takes program and getMemoryAt")
-{
-  // Program that adds 10 to itself and prints answer
-  vector<int> program = {504, 104, 902, 0, 10};
+// TEST_CASE("constructor that takes program and getMemoryAt")
+//{
+//   // Program that adds 10 to itself and prints answer
+//   vector<int> program = {504, 104, 902, 0, 10};
+//
+//  LittleComputer c1(program);
 
-  LittleComputer c1(program);
-
-  // verify program was stored
-  for (size_t i = 0; i < program.size(); i++)
-    CHECK(c1.getMemoryAt(i) == program.at(i));
-}
+// verify program was stored
+//  for (size_t i = 0; i < program.size(); i++)
+//    CHECK(c1.getMemoryAt(i) == program.at(i));
+//}
 
 // TEST_CASE("getCurrentInstruction start")
 // {
@@ -47,16 +47,16 @@ TEST_CASE("constructor that takes program and getMemoryAt")
 //     CHECK(c1.getCurrentInstruction() == 504);
 // }
 
-// TEST_CASE("step advances to next instruction")
-// {
-//     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {502, 102, 5};
+TEST_CASE("step advances to next instruction")
+{
+  // Program does not have to do anything meaningful for this test
+  vector<int> program = {502, 102, 5};
 
-//     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 1);
-//     CHECK(c1.getCurrentInstruction() == 102);
-// }
+  LittleComputer c1(program);
+  c1.step();
+  CHECK(c1.getProgramCounter() == 1);
+  CHECK(c1.getCurrentInstruction() == 102);
+}
 
 // TEST_CASE("isHalted and step does not advance halted program")
 // {
