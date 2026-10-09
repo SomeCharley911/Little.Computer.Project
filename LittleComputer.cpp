@@ -58,6 +58,7 @@ void LittleComputer::step()
     break;
   case 6:
     m_ProgramCounter = num;
+    step = false;
     break;
   }
   if (step)
