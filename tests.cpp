@@ -89,23 +89,23 @@ TEST_CASE("step add and subtract work")
   CHECK(c1.getAccumulator() == 3);
 }
 
-// TEST_CASE("step load and store work")
-// {
-//     // Program that loads from 5, stores it to location 12,
-//     //  loads from 6, reloads the value that was stored to 12
-//     vector<int> program = {505, 312, 506, 512, 0, 3, 8, 0, 0, 0, 0, 0, 0};
+TEST_CASE("step load and store work")
+{
+  // Program that loads from 5, stores it to location 12,
+  //  loads from 6, reloads the value that was stored to 12
+  vector<int> program = {505, 312, 506, 512, 0, 3, 8, 0, 0, 0, 0, 0, 0};
 
-//     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getAccumulator() == 3);
-//     c1.step();
-//     CHECK(c1.getAccumulator() == 3);
-//     CHECK(c1.getMemoryAt(12) == 3);
-//     c1.step();
-//     CHECK(c1.getAccumulator() == 8);
-//     c1.step();
-//     CHECK(c1.getAccumulator() == 3);
-// }
+  LittleComputer c1(program);
+  c1.step();
+  CHECK(c1.getAccumulator() == 3);
+  c1.step();
+  CHECK(c1.getAccumulator() == 3);
+  CHECK(c1.getMemoryAt(12) == 3);
+  c1.step();
+  CHECK(c1.getAccumulator() == 8);
+  c1.step();
+  CHECK(c1.getAccumulator() == 3);
+}
 
 // TEST_CASE("branch always")
 // {
