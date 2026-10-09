@@ -45,6 +45,12 @@ void LittleComputer::step()
     m_Accumulator += m_memory.at(getCurrentInstruction() - 100);
   else if (getCurrentInstruction() < 300)
     m_Accumulator -= m_memory.at(getCurrentInstruction() - 200);
+  else if (getCurrentInstruction() < 400)
+    m_memory.at(getCurrentInstruction() - 300) = m_Accumulator;
+  else if (getCurrentInstruction() < 500)
+    ;
+  else if (getCurrentInstruction() < 600)
+    m_Accumulator = m_memory.at(getCurrentInstruction() - 500);
 
   m_ProgramCounter++;
 }
