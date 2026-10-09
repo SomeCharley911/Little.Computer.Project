@@ -49,7 +49,8 @@ bool LittleComputer::isHalted()
 {
   if (getCurrentInstruction() == 0)
     return true;
-  return false;
+  else
+    return false;
 }
 
 void LittleComputer::restart()
