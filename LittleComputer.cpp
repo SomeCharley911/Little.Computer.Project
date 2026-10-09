@@ -43,7 +43,7 @@ void LittleComputer::step()
   bool step = true;
   int temp = getCurrentInstruction();
   int num = temp % 100;
-  switch (int instruction = temp / 100) {
+  switch (temp / 100) {
   case 1:
     m_Accumulator += m_memory.at(num);
     break;
