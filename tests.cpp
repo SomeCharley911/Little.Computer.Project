@@ -107,17 +107,17 @@ TEST_CASE("step load and store work")
   CHECK(c1.getAccumulator() == 3);
 }
 
-// TEST_CASE("branch always")
-// {
-//     // Program that jumps to instruction 3 then 1
-//     vector<int> program = {603, 0, 0, 601, 0};
+TEST_CASE("branch always")
+{
+  // Program that jumps to instruction 3 then 1
+  vector<int> program = {603, 0, 0, 601, 0};
 
-//     LittleComputer c1(program);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 3);
-//     c1.step();
-//     CHECK(c1.getProgramCounter() == 1);
-// }
+  LittleComputer c1(program);
+  c1.step();
+  CHECK(c1.getProgramCounter() == 3);
+  c1.step();
+  CHECK(c1.getProgramCounter() == 1);
+}
 
 // TEST_CASE("branch if 0")
 // {
