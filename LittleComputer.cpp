@@ -44,6 +44,7 @@ void LittleComputer::step()
 
 bool LittleComputer::isHalted()
 {
+  return false;
 }
 
 void LittleComputer::restart()
