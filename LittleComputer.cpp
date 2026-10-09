@@ -83,4 +83,6 @@ bool LittleComputer::isHalted()
 
 void LittleComputer::restart()
 {
+  m_ProgramCounter = 0;
+  m_Accumulator = 0;
 }
