@@ -47,7 +47,9 @@ void LittleComputer::step()
     m_Accumulator += m_memory.at(num);
   break;
 case 2:
-  m_Accumulator -= m_memory.at(num) break;
+  m_Accumulator -= m_memory.at(num);
+  break;
+
   m_ProgramCounter++;
 }
 
