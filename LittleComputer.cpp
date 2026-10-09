@@ -40,6 +40,7 @@ int LittleComputer::getCurrentInstruction()
 void LittleComputer::step()
 {
   vector<int> digits;
+  bool step = true;
   int temp = getCurrentInstruction();
   int num = temp % 100;
   switch (int instruction = temp / 100) {
@@ -49,9 +50,18 @@ void LittleComputer::step()
   case 2:
     m_Accumulator -= m_memory.at(num);
     break;
+  case 3:
+    m_memory.at(num) = m_Accumulator;
+    break;
+  case 5:
+    m_Accumulator = m_memory.at(num);
+    break;
+  case 6:
+    m_ProgramCounter = num;
+    break;
   }
-
-  m_ProgramCounter++;
+  if (step)
+    m_ProgramCounter++;
 }
 
 bool LittleComputer::isHalted()
