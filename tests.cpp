@@ -58,22 +58,22 @@ TEST_CASE("step advances to next instruction")
   CHECK(c1.getCurrentInstruction() == 102);
 }
 
-// TEST_CASE("isHalted and step does not advance halted program")
-// {
-//     // Program does not have to do anything meaningful for this test
-//     vector<int> program = {103, 103, 0, 5};
+TEST_CASE("isHalted and step does not advance halted program")
+{
+  // Program does not have to do anything meaningful for this test
+  vector<int> program = {103, 103, 0, 5};
 
-//     LittleComputer c1(program);
-//     CHECK(c1.isHalted() == false);
-//     c1.step();
-//     CHECK(c1.isHalted() == false);
-//     c1.step();
-//     CHECK(c1.isHalted() == true);
-//     CHECK(c1.getProgramCounter() == 2);
-//     c1.step();
-//     CHECK(c1.isHalted() == true);
-//     CHECK(c1.getProgramCounter() == 2);
-// }
+  LittleComputer c1(program);
+  CHECK(c1.isHalted() == false);
+  c1.step();
+  CHECK(c1.isHalted() == false);
+  c1.step();
+  CHECK(c1.isHalted() == true);
+  CHECK(c1.getProgramCounter() == 2);
+  c1.step();
+  CHECK(c1.isHalted() == true);
+  CHECK(c1.getProgramCounter() == 2);
+}
 
 // TEST_CASE("step add and subtract work")
 // {
