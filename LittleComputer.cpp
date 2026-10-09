@@ -39,30 +39,36 @@ int LittleComputer::getCurrentInstruction()
 
 void LittleComputer::step()
 {
-  if (getCurrentInstruction() < 100)
-    return;
-  else if (getCurrentInstruction() < 200)
-    m_Accumulator += m_memory.at(getCurrentInstruction() - 100);
-  else if (getCurrentInstruction() < 300)
-    m_Accumulator -= m_memory.at(getCurrentInstruction() - 200);
-  else if (getCurrentInstruction() < 400)
-    m_memory.at(getCurrentInstruction() - 300) = m_Accumulator;
-  else if (getCurrentInstruction() < 500)
-    ;
-  else if (getCurrentInstruction() < 600)
-    m_Accumulator = m_memory.at(getCurrentInstruction() - 500);
+  while (getCurrentInstruction() > 0) {
+    int temp = getCurrentInstruction();
+    int digit = temp % 10;   // Gets the last digit
+    digits.push_back(digit); // Stores it
+    number = number / 10;
+    if (getCurrentInstruction() < 100)
+      return;
+    else if (getCurrentInstruction() < 200)
+      m_Accumulator += m_memory.at(getCurrentInstruction() - 100);
+    else if (getCurrentInstruction() < 300)
+      m_Accumulator -= m_memory.at(getCurrentInstruction() - 200);
+    else if (getCurrentInstruction() < 400)
+      m_memory.at(getCurrentInstruction() - 300) = m_Accumulator;
+    else if (getCurrentInstruction() < 500)
+      ;
+    else if (getCurrentInstruction() < 600)
+      m_Accumulator = m_memory.at(getCurrentInstruction() - 500);
+    else if (getCurrentInstruction() < 600)
+      m_Accumulator = m_memory.at(getCurrentInstruction() - 500);
+    m_ProgramCounter++;
+  }
 
-  m_ProgramCounter++;
-}
+  bool LittleComputer::isHalted()
+  {
+    if (getCurrentInstruction() == 0)
+      return true;
+    else
+      return false;
+  }
 
-bool LittleComputer::isHalted()
-{
-  if (getCurrentInstruction() == 0)
-    return true;
-  else
-    return false;
-}
-
-void LittleComputer::restart()
-{
-}
+  void LittleComputer::restart()
+  {
+  }
