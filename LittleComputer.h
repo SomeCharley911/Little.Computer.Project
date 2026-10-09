@@ -42,7 +42,7 @@ public:
    *
    * @return int Current value in location
    */
-  int LittleComputer::getMemoryAt(size_t location);
+  int getMemoryAt(size_t location);
 
   /**
    * @brief return the value in current working memory location
