@@ -39,6 +39,7 @@ int LittleComputer::getCurrentInstruction()
 
 void LittleComputer::step()
 {
+  m_ProgramCounter += 1;
 }
 
 bool LittleComputer::isHalted()
