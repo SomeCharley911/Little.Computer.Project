@@ -41,11 +41,14 @@ void LittleComputer::step()
 {
   vector<int> digits;
   int temp = getCurrentInstruction();
-  int digit = (temp / 100) % 10; // Gets the last digit
-  digits.push_back(digit);       // Stores it
-  switch (int instruction = digits.at(2))
+  int num = temp % 100;
+  switch (int instruction = temp / 100)
   case 1:
-    m_ProgramCounter++;
+    m_Accumulator += m_memory.at(num);
+  break;
+case 2:
+  m_Accumulator -= m_memory.at(num) break;
+  m_ProgramCounter++;
 }
 
 bool LittleComputer::isHalted()
