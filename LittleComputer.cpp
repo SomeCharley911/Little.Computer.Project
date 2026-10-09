@@ -62,6 +62,10 @@ void LittleComputer::step()
     m_ProgramCounter = num;
     step = false;
     break;
+  case 7:
+    if (m_Accumulator = 0)
+      m_ProgramCounter = num;
+    break;
   }
   if (step)
     m_ProgramCounter++;
