@@ -20,7 +20,7 @@ public:
    *
    * @param vector<int> The instructions to be processed
    */
-  LittleComputer(vector<int> instructions);
+  LittleComputer(std::vector<int> instructions);
   /**
    * @brief Get the Program Counter
    *
